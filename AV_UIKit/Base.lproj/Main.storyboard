@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UEn-yL-uC3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AV_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVk-9H-yND">
+                                <rect key="frame" x="137" y="164" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.18637861359999999" green="0.6256043631" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3qP-y5-dQD"/>
+                                    <constraint firstAttribute="width" constant="100" id="r2O-WE-XyD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="相册">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goPhotoLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYD-9V-jgs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpn-5Y-ggz">
+                                <rect key="frame" x="137.5" y="248" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.18637861359999999" green="0.6256043631" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="相机库">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goSavedPhotosAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GxR-1W-8br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXu-eI-zfZ">
+                                <rect key="frame" x="137.5" y="332" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.18637861359999999" green="0.6256043631" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="拍照">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUe-97-CrT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-Nf-b83">
+                                <rect key="frame" x="137.5" y="416" width="100" height="44"/>
+                                <color key="backgroundColor" red="0.18637861359999999" green="0.6256043631" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="拍视频">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7NV-6T-2sX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wpn-5Y-ggz" firstAttribute="top" secondItem="FVk-9H-yND" secondAttribute="bottom" constant="40" id="4Hk-BU-xRj"/>
+                            <constraint firstItem="wpn-5Y-ggz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Rn-uF-VAq"/>
+                            <constraint firstItem="gXu-eI-zfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bfn-Bo-PT1"/>
+                            <constraint firstItem="gXu-eI-zfZ" firstAttribute="width" secondItem="FVk-9H-yND" secondAttribute="width" id="Bvh-dY-Gx1"/>
+                            <constraint firstItem="wpn-5Y-ggz" firstAttribute="height" secondItem="FVk-9H-yND" secondAttribute="height" id="FSR-gz-uFr"/>
+                            <constraint firstItem="wpn-5Y-ggz" firstAttribute="width" secondItem="FVk-9H-yND" secondAttribute="width" id="MgY-Ir-FvF"/>
+                            <constraint firstItem="8rA-Nf-b83" firstAttribute="top" secondItem="gXu-eI-zfZ" secondAttribute="bottom" constant="40" id="OLk-rc-NNr"/>
+                            <constraint firstItem="8rA-Nf-b83" firstAttribute="height" secondItem="FVk-9H-yND" secondAttribute="height" id="Xl9-HH-elk"/>
+                            <constraint firstItem="8rA-Nf-b83" firstAttribute="width" secondItem="FVk-9H-yND" secondAttribute="width" id="afI-O8-nP2"/>
+                            <constraint firstItem="gXu-eI-zfZ" firstAttribute="height" secondItem="FVk-9H-yND" secondAttribute="height" id="bKn-Yj-EPM"/>
+                            <constraint firstItem="gXu-eI-zfZ" firstAttribute="top" secondItem="wpn-5Y-ggz" secondAttribute="bottom" constant="40" id="bjx-oR-2D0"/>
+                            <constraint firstItem="8rA-Nf-b83" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bxl-7r-eQg"/>
+                            <constraint firstItem="FVk-9H-yND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kL8-Hn-iHD"/>
+                            <constraint firstItem="FVk-9H-yND" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rm1-RF-cAv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nwC-Vh-hPw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="flY-bH-JhV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UEn-yL-uC3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xht-3m-C9T">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8A2-Jd-FIv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rst-jE-hk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="-579.76011994002999"/>
+        </scene>
+    </scenes>
+</document>
