@@ -21,7 +21,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("info = " + info.description);
         picker.dismiss(animated: true, completion: nil);
-        
+        let vc = ShowImageViewController.init(nibName: "ShowImageViewController", bundle: nil)
+        vc.info = info;
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("cancel");
@@ -47,15 +49,17 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         vc.sourceType = UIImagePickerControllerSourceType.camera
 
         let requiredTypeImage = kUTTypeImage as String //拍照
-        vc.mediaTypes = [requiredTypeImage] //录制类型
+        let kUTTypeLivePhotoStr = kUTTypeLivePhoto as String
+        vc.mediaTypes = [requiredTypeImage, kUTTypeLivePhotoStr] //录制类型
 //        vc.allowsEditing = true //是否允许编辑
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
-    }
+     }
     
     @IBAction func goPhotoLibrary(_ sender: UIButton) {
         let vc :UIImagePickerController = UIImagePickerController.init()
         vc.sourceType = UIImagePickerControllerSourceType.photoLibrary //相册
+        vc.allowsEditing = true
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
@@ -63,6 +67,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBAction func goSavedPhotosAlbum(_ sender: UIButton) {
         let vc :UIImagePickerController = UIImagePickerController.init()
         vc.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum //相片列表，时刻
+        vc.allowsEditing = true
         vc.delegate = self
         self.present(vc, animated: true, completion: nil)
     }
